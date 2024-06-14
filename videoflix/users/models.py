@@ -7,6 +7,7 @@ class CustomUserManager(BaseUserManager):
         if not email:
             raise ValueError('Der Benutzer muss eine E-Mail-Adresse haben.')
         email = self.normalize_email(email)
+        extra_fields['username'] = email
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -30,9 +31,11 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
     
     def save(self, *args, **kwargs):
-        if not self.email_verification_token:
+        if not self.pk and not self.email_verification_token:
             self.email_verification_token = self.generate_verification_token()
+        print(f"Generated token before saving: {self.email_verification_token}")  # Debug-Ausgabe
         super().save(*args, **kwargs)
+        print(f"Token after saving to database: {self.email_verification_token}")  # Debug-Ausgabe
 
     def generate_verification_token(self):
         return secrets.token_urlsafe(20)
