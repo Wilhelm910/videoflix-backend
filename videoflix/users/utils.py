@@ -1,0 +1,10 @@
+from django.core.mail import send_mail
+from django.urls import reverse
+from django.conf import settings
+
+def send_verification_email(user):
+    token = user.email_verification_token
+    verification_link = f"{settings.FRONTEND_URL}/email-verification?token={token}"
+    subject = 'E-Mail Verifizierung'
+    message = f'Bitte klicken Sie auf den folgenden Link, um Ihre E-Mail zu verifizieren: {verification_link}'
+    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [user.email])
