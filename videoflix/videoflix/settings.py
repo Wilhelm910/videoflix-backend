@@ -31,6 +31,18 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # Andere Authentifizierungsklassen nach Bedarf
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+        # Andere Berechtigungsklassen nach Bedarf
+    ],
+}
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -140,6 +152,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
 ]
 
+
+CSRF_EXEMPT_PATHS = ['/logout/']
 
 
 FRONTEND_URL = 'http://localhost:5173'

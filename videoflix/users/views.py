@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from users.serializers import CustomUserSerializer
+from users.serializers import CustomUserSerializer, LoginSerializer
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -10,13 +10,18 @@ from django.contrib.auth import authenticate
 from users import serializers
 from .models import CustomUser
 from .utils import send_verification_email
+from rest_framework.permissions import IsAuthenticated
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
 
 class RegisterUserView(APIView):
+    permission_classes = [AllowAny] 
     def post(self, request):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
-            print(f"Token after user creation: {user.email_verification_token}")
+          #  print(f"Token after user creation: {user.email_verification_token}")
             send_verification_email(user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -24,7 +29,7 @@ class RegisterUserView(APIView):
 
 class VerifyEmailView(APIView):
     def get(self, request, token, format=None):
-        print(f"Received token: {token}")  # Debug-Ausgabe
+      #  print(f"Received token: {token}")  # Debug-Ausgabe
         user = get_object_or_404(CustomUser, email_verification_token=token)
         print(f"User's token: {user.email_verification_token}")
         if user.is_verified:
@@ -38,6 +43,7 @@ class VerifyEmailView(APIView):
     
     
 class CustomUserView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     def get(self, request, format=None):
         users = CustomUser.objects.all()
         serializer = CustomUserSerializer(users, many=True)
@@ -45,6 +51,8 @@ class CustomUserView(APIView):
     
     
 class UserLoginView(ObtainAuthToken):
+    serializer_class = LoginSerializer
+    
     def post(self, request, *args, **kwargs):
         print('Received login request. Data:', request.data)
         serializer = self.serializer_class(data=request.data,context={'request': request})
@@ -52,7 +60,6 @@ class UserLoginView(ObtainAuthToken):
             email = serializer.validated_data['email']
             password = serializer.validated_data['password']
             user = authenticate(request=request, username=email, password=password)
-            print("TEST")
             if user:
                 token, created = Token.objects.get_or_create(user=user)
                 response_data = {
@@ -65,3 +72,21 @@ class UserLoginView(ObtainAuthToken):
                 return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+        
+@method_decorator(csrf_exempt, name='dispatch')
+class LogoutView(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request, *args, **kwargs):
+        try:
+            if hasattr(request.user, 'auth_token'):
+                request.user.auth_token.delete()
+            else:
+                print("No auth_token found for user:", request.user)  # Debugging-Ausgabe
+                return Response({'error': 'Invalid token or user not authenticated'}, status=status.HTTP_400_BAD_REQUEST)
+        except AttributeError:
+            print("AttributeError: User not authenticated")  # Debugging-Ausgabe
+            return Response({'error': 'Invalid token or user not authenticated'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        return Response({'success': 'Logged out successfully'}, status=status.HTTP_200_OK)
+    

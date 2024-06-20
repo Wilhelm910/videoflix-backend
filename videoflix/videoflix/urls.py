@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from users.views import CustomUserView, RegisterUserView, UserLoginView, VerifyEmailView
+from users.views import CustomUserView, LogoutView, RegisterUserView, UserLoginView, VerifyEmailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', RegisterUserView.as_view(), name='register'),
     path('verify-email/<str:token>/', VerifyEmailView.as_view(), name='verify-email'),
     path('get-all-users/', CustomUserView.as_view(), name="get-all-users"),
-    path("login/", UserLoginView.as_view(), name="login")
+    path("login/", UserLoginView.as_view(), name="login"),
+    path("logout/", LogoutView.as_view(), name="logout"),
 ]
