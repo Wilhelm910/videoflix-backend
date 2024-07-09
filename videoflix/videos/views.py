@@ -1,3 +1,23 @@
-from django.shortcuts import render
+from django.views.decorators.cache import cache_page
+from django.core.cache.backends.base import DEFAULT_TIMEOUT 
+from django.views.decorators.cache import cache_page 
+from django.conf import settings
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from .models import Video
+from videos.serializer import VideoSerializer
 
-# Create your views here.
+
+# CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
+
+# @cache_page(CACHE_TTL)
+
+
+class VideoListCreateView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get(self, request, format=None):
+        videos = Video.objects.all()
+        serializer = VideoSerializer(videos, many=True)
+        return Response(serializer.data)

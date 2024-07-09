@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +44,10 @@ REST_FRAMEWORK = {
 }
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,12 +57,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "users",
-    "videos",
+    "videos.apps.VideosConfig",
     'corsheaders',
-    "rest_framework.authtoken"
+    "rest_framework.authtoken",
+    "debug_toolbar",
+    "django_rq",
+    'import_export',
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -67,7 +76,65 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    
 ]
+
+RQ_QUEUES = {
+    'WORKER_CLASS': 'rq_win.WindowsWorker',
+    "default": {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+        "DEFAULT_TIMEOUT": 360,
+        'PASSWORD': 'foobared',
+    }
+}
+
+
+# RQ_QUEUES = {
+#     'default': {
+#         'HOST': 'localhost',
+#         'PORT': 6379,
+#         'DB': 0,
+#         'USERNAME': 'some-user',
+#         'PASSWORD': 'foobared',
+#         'DEFAULT_TIMEOUT': 360,
+#         'REDIS_CLIENT_KWARGS': {    # Eventual additional Redis connection arguments
+#             'ssl_cert_reqs': None,
+#         },
+#     },
+#     'high': {
+#         'URL': os.getenv('REDISTOGO_URL', 'redis://localhost:6379/0'), # If you're on Heroku
+#         'DEFAULT_TIMEOUT': 500,
+#     },
+#     'low': {
+#         'HOST': 'localhost',
+#         'PORT': 6379,
+#         'DB': 0,
+#     }
+# }
+
+# RQ_EXCEPTION_HANDLERS = ['path.to.my.handler'] # If you need custom exception handlers
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "PASSWORD": "foobared",
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "videoflix"
+    }
+}
+
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+
 
 ROOT_URLCONF = 'videoflix.urls'
 
@@ -89,6 +156,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'videoflix.wsgi.application'
 
+
+CACHE_TTL = 60 * 15
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -118,6 +187,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
 
 
 AUTH_USER_MODEL = 'users.CustomUser'

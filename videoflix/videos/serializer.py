@@ -1,0 +1,9 @@
+
+
+from rest_framework import serializers
+from .models import Video
+
+class VideoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Video
+        fields = ['id', 'created_at', 'title', 'description', 'video_file', 'video_file_480p']
