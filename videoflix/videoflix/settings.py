@@ -75,9 +75,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    
+    'django.middleware.common.CommonMiddleware',    
 ]
+
+
+def show_toolbar(request):
+    # Deaktivieren für Media URLs
+    if request.path.startswith('/media/'):
+        return False
+    # Weitere Bedingungen können hier hinzugefügt werden
+    return True
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': 'videoflix.settings.show_toolbar',  # Pfad zur Funktion anpassen
+}
+
+
 
 RQ_QUEUES = {
     'WORKER_CLASS': 'rq_win.WindowsWorker',

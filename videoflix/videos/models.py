@@ -10,3 +10,12 @@ class Video(models.Model):
     
     def __str__(self):
         return self.title
+    
+    
+class Video480p(models.Model):
+    video = models.OneToOneField(Video, on_delete=models.CASCADE, related_name='video_480p')
+    video_file_480p = models.FileField(upload_to="videos/480p", blank=True, null=True)
+    
+    def __str__(self):
+        return f"{self.video.title} - 480p"
+
