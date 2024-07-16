@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Video, Video480p
-from videos.serializer import VideoSerializer
+from videos.serializer import Video480pSerializer, VideoSerializer
 
 
 # CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
@@ -30,9 +30,5 @@ class Video480pView(APIView):
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
         video_480p = get_object_or_404(Video480p, video=video)
-        
-        # Erstelle eine JSON-Antwort mit dem URL des 480p-Videos
-        response_data = {
-            'video_480p_url': video_480p.video_file_480p.url
-        }
-        return Response(response_data)
+        serializer = Video480pSerializer(video_480p)
+        return Response(serializer.data)
