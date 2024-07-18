@@ -21,6 +21,7 @@ class VideoListCreateView(APIView):
     def get(self, request, format=None):
         videos = Video.objects.all()
         serializer = VideoSerializer(videos, many=True)
+        print(serializer.data)
         return Response(serializer.data)
     
     
@@ -28,7 +29,10 @@ class Video480pView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, video_id, format=None):
+        print(video_id)
         video = get_object_or_404(Video, id=video_id)
+        print(video)
         video_480p = get_object_or_404(Video480p, video=video)
         serializer = Video480pSerializer(video_480p)
+        print(serializer.data)
         return Response(serializer.data)

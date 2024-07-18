@@ -6,7 +6,7 @@ from .models import Video, Video480p
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
-        fields = ['id', 'created_at', 'title', 'description', 'video_file', 'video_file_480p']
+        fields = ['id', 'created_at', 'title', 'description', 'video_file']
         
 
 class Video480pSerializer(serializers.ModelSerializer):

@@ -238,6 +238,9 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
 ]
 
+CORS_ALLOW_MEDIA = True
+
+
 
 CSRF_EXEMPT_PATHS = ['/logout/']
 
