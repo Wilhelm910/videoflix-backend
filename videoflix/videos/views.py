@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Video, Video480p
 from videos.serializer import Video480pSerializer, VideoDetailSerializer, VideoSerializer
 from rest_framework import status
+from rest_framework.authentication import TokenAuthentication
 
 
 # CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
@@ -51,3 +52,26 @@ class VideoView(APIView):
         video = get_object_or_404(Video, id=video_id)
         serializer = VideoDetailSerializer(video)
         return Response(serializer.data)
+    
+    
+class UpdateFavouriteView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    authentication_classes = [TokenAuthentication]
+    def put(self, request, video_id, format=None):
+        video = get_object_or_404(Video, id=video_id)
+        favourite_status = request.data.get('favourite')
+        
+         # Check if the 'favourite' field is provided in the request data
+        if favourite_status is None:
+            return Response({'detail': 'Favourite status is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Validate that 'favourite' is a boolean
+        if not isinstance(favourite_status, bool):
+            return Response({'detail': 'Favourite status must be a boolean.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Update the 'favourite' field
+        video.favourite = favourite_status
+        video.save()
+        
+        serializer = VideoSerializer(video)
+        return Response(serializer.data, status=status.HTTP_200_OK)

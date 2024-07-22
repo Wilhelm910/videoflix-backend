@@ -29,6 +29,8 @@ class Video(models.Model):
     description = models.CharField(max_length=500)
     video_file = models.FileField(upload_to="videos", blank=True, null=True)
     thumbnail = models.FileField(upload_to='thumbnails', blank=True, null=True)
+    categories = models.JSONField(default=list, blank=True)
+    favourite = models.BooleanField(default=False)
     
     def __str__(self):
         return self.title
