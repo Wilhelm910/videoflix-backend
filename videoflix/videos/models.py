@@ -24,13 +24,23 @@ from django.db import models
 from datetime import date
 
 class Video(models.Model):
+    GROUP_CHOICES = (
+        ('top10', 'Top 10'),
+        ('scifi', 'Sci Fi'),
+        ('preisgekrönt', 'Preisgekrönt'),
+        ('us-serien', 'US-Serien'),
+        ('comedy', 'Comedy'),
+        ('action', 'Action'),
+    )
+    
     created_at = models.DateField(default=date.today)
     title = models.CharField(max_length=80)
     description = models.CharField(max_length=500)
     video_file = models.FileField(upload_to="videos", blank=True, null=True)
     thumbnail = models.FileField(upload_to='thumbnails', blank=True, null=True)
-    categories = models.JSONField(default=list, blank=True)
+    categories = models.JSONField(default=list)
     favourite = models.BooleanField(default=False)
+    group = models.CharField(max_length=20, choices=GROUP_CHOICES, default="top10")
     
     def __str__(self):
         return self.title
