@@ -23,7 +23,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     is_verified = models.BooleanField(default=False)
-    email_verification_token = models.CharField(max_length=50, default='')
+    email_verification_token = models.CharField(max_length=50, blank=True, null=True)
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -38,7 +38,9 @@ class CustomUser(AbstractUser):
         print(f"Token after saving to database: {self.email_verification_token}")  # Debug-Ausgabe
 
     def generate_verification_token(self):
-        return secrets.token_urlsafe(20)
+        token = secrets.token_urlsafe(20)
+        print(f"Generated token: {token}")  # Debug-Ausgabe
+        return token
     
     def __str__(self):
         return self.email
