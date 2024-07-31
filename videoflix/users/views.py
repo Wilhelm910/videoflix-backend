@@ -49,14 +49,20 @@ class VerifyEmailView(APIView):
             user = get_object_or_404(CustomUser, email_verification_token=token)
             print(f"User's token: {user.email_verification_token}")  # Debug-Ausgabe
             if user.is_verified:
+                print("E-Mail wurde bereits verifiziert.")  # Debug-Ausgabe
                 return Response({"message": "E-Mail wurde bereits verifiziert."}, status=status.HTTP_400_BAD_REQUEST)
             if user.email_verification_token == token:
+                print("Token stimmt überein, verifiziere Benutzer...")  # Debug-Ausgabe
                 user.is_verified = True
-                user.email_verification_token = ''
+                
                 user.save()
+                user.email_verification_token = ''
+                print("Benutzer erfolgreich verifiziert und gespeichert.")  # Debug-Ausgabe
                 return Response({"message": "E-Mail erfolgreich verifiziert."}, status=status.HTTP_200_OK)
+            print("Ungültiger Token.")  # Debug-Ausgabe
             return Response({"message": "Ungültiger Token."}, status=status.HTTP_400_BAD_REQUEST)
         except CustomUser.DoesNotExist:
+            print("Benutzer nicht gefunden.")  # Debug-Ausgabe
             return Response({"message": "Benutzer nicht gefunden."}, status=status.HTTP_404_NOT_FOUND)
 
     
