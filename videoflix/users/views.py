@@ -114,3 +114,11 @@ class LogoutView(APIView):
         
         return Response({'success': 'Logged out successfully'}, status=status.HTTP_200_OK)
     
+    
+    
+class CurrentUserView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self, request,format=None):
+        user = request.user
+        serializer = CustomUserSerializer(user)
+        return Response(serializer.data)

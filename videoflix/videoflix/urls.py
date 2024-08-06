@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from users.views import CustomUserView, LogoutView, RegisterUserView, UserLoginView, VerifyEmailView
+from users.views import CurrentUserView, CustomUserView, LogoutView, RegisterUserView, UserLoginView, VerifyEmailView
 from django.conf import settings
 from django.conf.urls.static import static
 # from debug_toolbar.toolbar import debug_toolbar_urls
@@ -31,6 +31,7 @@ urlpatterns = [
     path("login/", UserLoginView.as_view(), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
     path('django-rq/', include('django_rq.urls')),
+    path('current-user/', CurrentUserView.as_view(), name='current-user'),
     
     path('videos/', VideoListCreateView.as_view(), name='video-list-create'),
     path('video/<int:video_id>/', VideoView.as_view(), name='video-detail'),
