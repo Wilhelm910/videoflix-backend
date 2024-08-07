@@ -6,6 +6,12 @@ def convert_480p(source):
     subprocess.run(cmd)
     return target
 
+def convert_720p(source):
+    target = source.replace(".mp4", "_720p.mp4")
+    cmd = 'ffmpeg -i "{}" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "{}"'.format(source, target)
+    subprocess.run(cmd)
+    return target
+
 
 def create_thumbnail(source):
     target = source.replace(".mp4", "_thumbnail.jpg")

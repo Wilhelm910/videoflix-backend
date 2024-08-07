@@ -6,8 +6,8 @@ from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from .models import Video, Video480p
-from videos.serializer import Video480pSerializer, VideoDetailSerializer, VideoSerializer
+from .models import Video, Video480p, Video720p
+from videos.serializer import Video480pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
 from rest_framework import status
 from rest_framework.authentication import TokenAuthentication
 
@@ -42,6 +42,15 @@ class Video480pView(APIView):
         video = get_object_or_404(Video, id=video_id)
         video_480p = get_object_or_404(Video480p, video=video)
         serializer = Video480pSerializer(video_480p)
+        return Response(serializer.data)
+    
+class Video720pView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get(self, request, video_id, format=None):
+        video = get_object_or_404(Video, id=video_id)
+        video_720p = get_object_or_404(Video720p, video=video)
+        serializer = Video720pSerializer(video_720p)
         return Response(serializer.data)
     
 

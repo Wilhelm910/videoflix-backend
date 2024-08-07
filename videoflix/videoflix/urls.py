@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 # from debug_toolbar.toolbar import debug_toolbar_urls
 from django.urls import include
-from videos.views import Video480pView, VideoListCreateView, VideoView, UpdateFavouriteView
+from videos.views import Video480pView, Video720pView, VideoListCreateView, VideoView, UpdateFavouriteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,6 +37,7 @@ urlpatterns = [
     path('videos/', VideoListCreateView.as_view(), name='video-list-create'),
     path('video/<int:video_id>/', VideoView.as_view(), name='video-detail'),
     path('video/<int:video_id>/480p/', Video480pView.as_view(), name='get_480p_video'),
+    path('video/<int:video_id>/720p/', Video720pView.as_view(), name='get_720p_video'),
     path('video/<int:video_id>/update-favourite/', UpdateFavouriteView.as_view(), name='update-favourite'),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
 # + debug_toolbar_urls()
