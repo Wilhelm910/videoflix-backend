@@ -66,7 +66,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -102,6 +102,17 @@ RQ_QUEUES = {
         'PASSWORD': 'foobared',
     }
 }
+
+# RQ_QUEUES = {
+#     'default': {
+#         'HOST': 'localhost',
+#         'PORT': 6379,
+#         'DB': 0,
+#         'DEFAULT_TIMEOUT': 360,
+#         'PASSWORD': 'foobared',
+#         'WORKER_CLASS': 'rq_win.WindowsWorker',  # Vergewissern Sie sich, dass dies korrekt ist
+#     }
+# }
 
 
 # RQ_QUEUES = {
@@ -225,6 +236,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATICFILES_DIR = [
+#     BASE_DIR / "static",
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

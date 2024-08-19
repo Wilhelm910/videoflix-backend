@@ -5,6 +5,7 @@ from django.db.models.signals import post_save, post_delete
 import os
 import django_rq
 from django.conf import settings
+import django_rq
 
 # @receiver(post_save, sender=Video)
 # def video_post_save(sender, instance, created, **kwargs):
@@ -19,33 +20,7 @@ from django.conf import settings
 #         instance.save()
    
         
-@receiver(post_save, sender=Video)
-def video_post_save(sender, instance, created, **kwargs):
-    print("Video wurde gespeichert")
-    if created:
-        print("New video created")
-        output_path = convert_480p(instance.video_file.path)
-        relative_output_path = os.path.relpath(output_path, settings.MEDIA_ROOT).replace('\\', '/')
-        
-        output_path = convert_720p(instance.video_file.path)
-        relative_output_path = os.path.relpath(output_path, settings.MEDIA_ROOT).replace('\\', '/')
-        
-        # Erstelle ein Thumbnail für das Video
-        thumbnail_path = create_thumbnail(instance.video_file.path)
-        relative_thumbnail_path = os.path.relpath(thumbnail_path, settings.MEDIA_ROOT).replace('\\', '/')
-          # Speichere den Thumbnail-Pfad im Video-Objekt
-        instance.thumbnail = relative_thumbnail_path
-        instance.save()  # Update das Video-Objekt, um das Thumbnail zu speichern
-        
-        Video480p.objects.create(
-            video=instance,
-            video_file_480p=relative_output_path
-        )
-        Video720p.objects.create(
-            video=instance,
-            video_file_720p=relative_output_path
-        )
-        instance.save()
+
       
         
 
@@ -86,6 +61,88 @@ def video_post_save(sender, instance, created, **kwargs):
 #     except Video480p.DoesNotExist:
 #         # Video480p existiert nicht, nichts zu tun
 #         pass
+
+
+#@receiver(post_save, sender=Video)
+# def video_post_save(sender, instance, created, **kwargs):
+#     print("Video wurde gespeichert")
+#     if created:
+#         print("New video created")
+#         output_path = convert_480p(instance.video_file.path)
+#         relative_output_path = os.path.relpath(output_path, settings.MEDIA_ROOT).replace('\\', '/')
+        
+#         output_path = convert_720p(instance.video_file.path)
+#         relative_output_path = os.path.relpath(output_path, settings.MEDIA_ROOT).replace('\\', '/')
+        
+#         # Erstelle ein Thumbnail für das Video
+#         thumbnail_path = create_thumbnail(instance.video_file.path)
+#         relative_thumbnail_path = os.path.relpath(thumbnail_path, settings.MEDIA_ROOT).replace('\\', '/')
+#           # Speichere den Thumbnail-Pfad im Video-Objekt
+#         instance.thumbnail = relative_thumbnail_path
+#         instance.save()  # Update das Video-Objekt, um das Thumbnail zu speichern
+        
+#         Video480p.objects.create(
+#             video=instance,
+#             video_file_480p=relative_output_path
+#         )
+#         Video720p.objects.create(
+#             video=instance,
+#             video_file_720p=relative_output_path
+#         )
+#         instance.save()
+
+
+@receiver(post_save, sender=Video)
+def video_post_save(sender, instance, created, **kwargs):
+    print("Video wurde gespeichert")
+    if created:
+        queue = django_rq.get_queue("default", autocommit=True)
+        queue.enqueue(convert_and_save_video, instance.id)
+        print("New video created and tasks queued")
+
+# def convert_and_save_video(video_id):
+#     video = Video.objects.get(id=video_id)
+    
+#     # Conversion for 480p
+#     output_path_480p = convert_480p(video.video_file.path)
+#     relative_output_path_480p = os.path.relpath(output_path_480p, settings.MEDIA_ROOT).replace('\\', '/')
+#     Video480p.objects.create(video=video, video_file_480p=relative_output_path_480p)
+
+#     # Conversion for 720p
+#     output_path_720p = convert_720p(video.video_file.path)
+#     relative_output_path_720p = os.path.relpath(output_path_720p, settings.MEDIA_ROOT).replace('\\', '/')
+#     Video720p.objects.create(video=video, video_file_720p=relative_output_path_720p)
+    
+#     # Thumbnail creation
+#     thumbnail_path = create_thumbnail(video.video_file.path)
+#     relative_thumbnail_path = os.path.relpath(thumbnail_path, settings.MEDIA_ROOT).replace('\\', '/')
+#     video.thumbnail = relative_thumbnail_path
+#     video.save()
+def convert_and_save_video(video_id):
+    try:
+        video = Video.objects.get(id=video_id)
+        
+        # Conversion for 480p
+        output_path_480p = convert_480p(video.video_file.path)
+        relative_output_path_480p = os.path.relpath(output_path_480p, settings.MEDIA_ROOT).replace('\\', '/')
+        Video480p.objects.create(video=video, video_file_480p=relative_output_path_480p)
+    
+        # Conversion for 720p
+        output_path_720p = convert_720p(video.video_file.path)
+        relative_output_path_720p = os.path.relpath(output_path_720p, settings.MEDIA_ROOT).replace('\\', '/')
+        Video720p.objects.create(video=video, video_file_720p=relative_output_path_720p)
+        
+        # Thumbnail creation
+        thumbnail_path = create_thumbnail(video.video_file.path)
+        if not thumbnail_path:
+            raise ValueError("Thumbnail konnte nicht erstellt werden.")
+        relative_thumbnail_path = os.path.relpath(thumbnail_path, settings.MEDIA_ROOT).replace('\\', '/')
+        video.thumbnail = relative_thumbnail_path
+        video.save()
+    except Exception as e:
+        print(f"Fehler im RQ-Job für Video ID {video_id}: {e}")
+
+
 
 
 def delete_file(file_field):

@@ -10,11 +10,12 @@ from .models import Video, Video480p, Video720p
 from videos.serializer import Video480pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
 from rest_framework import status
 from rest_framework.authentication import TokenAuthentication
+from django.utils.decorators import method_decorator
 
 
-# CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
+CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
 
-# @cache_page(CACHE_TTL)
+
 
 
 # class VideoListCreateView(APIView):
@@ -27,7 +28,7 @@ from rest_framework.authentication import TokenAuthentication
 
 class VideoListCreateView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-
+    @method_decorator(cache_page(CACHE_TTL))
     def get(self, request, format=None):
         videos = Video.objects.all()
         serializer = VideoSerializer(videos, many=True)
@@ -37,7 +38,7 @@ class VideoListCreateView(APIView):
     
 class Video480pView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-
+    @method_decorator(cache_page(CACHE_TTL))  
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
         video_480p = get_object_or_404(Video480p, video=video)
@@ -46,7 +47,7 @@ class Video480pView(APIView):
     
 class Video720pView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-
+    @method_decorator(cache_page(CACHE_TTL))
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
         video_720p = get_object_or_404(Video720p, video=video)
@@ -56,7 +57,7 @@ class Video720pView(APIView):
 
 class VideoView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-
+    @method_decorator(cache_page(CACHE_TTL))
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
         serializer = VideoDetailSerializer(video)

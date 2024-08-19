@@ -30,7 +30,6 @@ urlpatterns = [
     path('get-all-users/', CustomUserView.as_view(), name="get-all-users"),
     path("login/", UserLoginView.as_view(), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
-    path('django-rq/', include('django_rq.urls')),
     path('current-user/', CurrentUserView.as_view(), name='current-user'),
     path('change-password/', ChangePasswordView.as_view(), name='change-password'),
     
@@ -39,5 +38,8 @@ urlpatterns = [
     path('video/<int:video_id>/480p/', Video480pView.as_view(), name='get_480p_video'),
     path('video/<int:video_id>/720p/', Video720pView.as_view(), name='get_720p_video'),
     path('video/<int:video_id>/update-favourite/', UpdateFavouriteView.as_view(), name='update-favourite'),
+    
+    path('django-rq/', include('django_rq.urls')),
+    path('__debug__/',include('debug_toolbar.urls')),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
 # + debug_toolbar_urls()
