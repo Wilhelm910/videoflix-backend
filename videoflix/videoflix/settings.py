@@ -93,7 +93,7 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 RQ_QUEUES = {
-    'WORKER_CLASS': 'rq_win.WindowsWorker',
+    #'WORKER_CLASS': 'rq_win.WindowsWorker',
     "default": {
         'HOST': 'localhost',
         'PORT': 6379,
@@ -102,6 +102,15 @@ RQ_QUEUES = {
         'PASSWORD': 'foobared',
     }
 }
+
+DJANGO_RQ = {
+    'default': {
+        'USE_REDIS_CACHE': True,
+        'WORKER_CLASS': 'rq_win.WindowsWorker',
+    }
+}
+
+
 
 # RQ_QUEUES = {
 #     'default': {

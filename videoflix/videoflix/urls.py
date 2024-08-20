@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 # from debug_toolbar.toolbar import debug_toolbar_urls
 from django.urls import include
 from videos.views import Video480pView, Video720pView, VideoListCreateView, VideoView, UpdateFavouriteView
+from django_rq import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,5 +42,6 @@ urlpatterns = [
     
     path('django-rq/', include('django_rq.urls')),
     path('__debug__/',include('debug_toolbar.urls')),
+    #path('django-rq/', views.dashboard, name='django-rq-dashboard'),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
 # + debug_toolbar_urls()
