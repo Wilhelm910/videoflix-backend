@@ -10,7 +10,6 @@ from django.contrib.auth import get_user_model
 
 ##### Models
 
-
 class VideoModelTest(TestCase):
 
     def setUp(self):
@@ -42,61 +41,7 @@ class VideoModelTest(TestCase):
         self.assertEqual(str(self.video), 'Test Video')
 
 
-# class Video480pModelTest(TestCase):
-
-#     @classmethod
-#     def setUpTestData(cls):
-#         # Erstelle ein Video
-#         cls.video = Video.objects.create(
-#             title='Test Video',
-#             description='Test Description',
-#             video_file='path/to/video.mp4'
-#         )
-
-#         # Erstelle ein Video480p-Objekt
-#         cls.video_480p = Video480p.objects.create(
-#             video=cls.video,
-#             video_file_480p='path/to/video_480p.mp4'
-#         )
-
-#     def test_video_480p_creation(self):
-#         """Test the creation of a Video480p object"""
-#         video_480p = Video480p.objects.get(id=self.video_480p.id)
-#         self.assertEqual(video_480p.video, self.video)
-#         self.assertEqual(video_480p.video_file_480p.name, 'path/to/video_480p.mp4')
-
-#     def test_str_method(self):
-#         """Test the __str__ method of the Video480p model"""
-#         self.assertEqual(str(self.video_480p), 'Test Video_480p')
-
-
-# class Video720pModelTest(TestCase):
-
-#     def setUp(self):
-#         self.video = Video.objects.create(
-#             title='Test Video',
-#             description='Test Description',
-#             video_file='path/to/video.mp4'
-#         )
-#         self.video_720p = Video720p.objects.create(
-#             video=self.video,
-#             video_file_720p='path/to/video_720p.mp4'
-#         )
-
-#     def test_video_720p_creation(self):
-#         """Test the creation of a Video720p object"""
-#         video_720p = Video720p.objects.get(id=self.video_720p.id)
-#         self.assertEqual(video_720p.video, self.video)
-#         self.assertEqual(video_720p.video_file_720p, 'path/to/video_720p.mp4')
-
-#     def test_str_method(self):
-#         """Test the __str__ method of the Video720p model"""
-#         self.assertEqual(str(self.video_720p), 'Test Video_720p')
-
-
 ############## Views
-
-
 
 
 
@@ -120,59 +65,6 @@ class VideoListCreateViewTest(APITestCase):
             video_file='path/to/video2.mp4'
         )
 
-
-
-# class Video480pViewTest(APITestCase):
-
-#     def setUp(self):
-#         User = get_user_model()
-#         self.user = User.objects.create_user(email='testuser@example.com', password='testpassword')
-#         self.token = Token.objects.create(user=self.user)
-#         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-
-#         # Create a video
-#         self.video = Video.objects.create(
-#             title='Test Video',
-#             description='Description',
-#             video_file='path/to/video.mp4'
-#         )
-#         self.video_480p = Video480p.objects.create(
-#             video=self.video,
-#             video_file_480p='path/to/video_480p.mp4'
-#         )
-
-#     def test_video_480p(self):
-#         """Test the GET request for 480p version of a video."""
-#         url = reverse('video-480p', args=[self.video.id])  # Ensure this matches your URL pattern name
-#         response = self.client.get(url)
-#         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#         self.assertEqual(response.data['video_file_480p'], 'path/to/video_480p.mp4')
-
-
-# class Video720pViewTest(APITestCase):
-
-#     def setUp(self):
-#         self.user = User.objects.create_user(username='testuser', password='testpassword')
-#         self.token = Token.objects.create(user=self.user)
-#         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-
-#         # Create a video
-#         self.video = Video.objects.create(
-#             title='Test Video',
-#             description='Description',
-#             video_file='path/to/video.mp4'
-#         )
-#         self.video_720p = Video720p.objects.create(
-#             video=self.video,
-#             video_file_720p='path/to/video_720p.mp4'
-#         )
-
-#     def test_video_720p(self):
-#         """Test the GET request for 720p version of a video."""
-#         url = reverse('video-720p', args=[self.video.id])  # Ensure this matches your URL pattern name
-#         response = self.client.get(url)
-#         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#         self.assertEqual(response.data['video_file_720p'], 'path/to/video_720p.mp4')
 
 
 class VideoViewTest(APITestCase):

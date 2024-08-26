@@ -76,15 +76,3 @@ class UpdateFavouriteView(APIView):
         
         serializer = VideoSerializer(video)
         return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-
-
-
-# class VideoListCreateView(APIView):
-#     permission_classes = [IsAuthenticatedOrReadOnly]
-
-#     def get(self, request, format=None):
-#         videos = Video.objects.all()
-#         serializer = VideoSerializer(videos, many=True)
-#         return Response(serializer.data)

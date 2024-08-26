@@ -27,20 +27,6 @@ class RegisterUserView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# class VerifyEmailView(APIView):
-#     def get(self, request, token, format=None):
-#       #  print(f"Received token: {token}")  # Debug-Ausgabe
-#         user = get_object_or_404(CustomUser, email_verification_token=token)
-#         print(f"User's token: {user.email_verification_token}")
-#         if user.is_verified:
-#             return Response({"message": "E-Mail wurde bereits verifiziert."}, status=status.HTTP_400_BAD_REQUEST)
-#         if user.email_verification_token == token:
-#             user.is_verified = True
-#             user.email_verification_token = ''
-#             user.save()
-#             return Response({"message": "E-Mail erfolgreich verifiziert."}, status=status.HTTP_200_OK)
-#         return Response({"message": "Ungültiger Token."}, status=status.HTTP_400_BAD_REQUEST)
-    
 class VerifyEmailView(APIView):
     permission_classes = [AllowAny] 
     def get(self, request, token, format=None):

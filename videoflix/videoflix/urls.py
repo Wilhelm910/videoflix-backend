@@ -19,13 +19,14 @@ from django.urls import path
 from users.views import ChangePasswordView, CurrentUserView, CustomUserView, LogoutView, RegisterUserView, UserLoginView, VerifyEmailView
 from django.conf import settings
 from django.conf.urls.static import static
-# from debug_toolbar.toolbar import debug_toolbar_urls
 from django.urls import include
 from videos.views import Video480pView, Video720pView, VideoListCreateView, VideoView, UpdateFavouriteView
 from django_rq import views
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='/admin/', permanent=False)),
     path('register/', RegisterUserView.as_view(), name='register'),
     path('verify-email/<str:token>/', VerifyEmailView.as_view(), name='verify-email'),
     path('get-all-users/', CustomUserView.as_view(), name="get-all-users"),
@@ -42,6 +43,5 @@ urlpatterns = [
     
     path('django-rq/', include('django_rq.urls')),
     path('__debug__/',include('debug_toolbar.urls')),
-    #path('django-rq/', views.dashboard, name='django-rq-dashboard'),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
-# + debug_toolbar_urls()
+

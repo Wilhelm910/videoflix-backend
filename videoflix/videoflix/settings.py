@@ -111,45 +111,6 @@ DJANGO_RQ = {
 }
 
 
-
-# RQ_QUEUES = {
-#     'default': {
-#         'HOST': 'localhost',
-#         'PORT': 6379,
-#         'DB': 0,
-#         'DEFAULT_TIMEOUT': 360,
-#         'PASSWORD': 'foobared',
-#         'WORKER_CLASS': 'rq_win.WindowsWorker',  # Vergewissern Sie sich, dass dies korrekt ist
-#     }
-# }
-
-
-# RQ_QUEUES = {
-#     'default': {
-#         'HOST': 'localhost',
-#         'PORT': 6379,
-#         'DB': 0,
-#         'USERNAME': 'some-user',
-#         'PASSWORD': 'foobared',
-#         'DEFAULT_TIMEOUT': 360,
-#         'REDIS_CLIENT_KWARGS': {    # Eventual additional Redis connection arguments
-#             'ssl_cert_reqs': None,
-#         },
-#     },
-#     'high': {
-#         'URL': os.getenv('REDISTOGO_URL', 'redis://localhost:6379/0'), # If you're on Heroku
-#         'DEFAULT_TIMEOUT': 500,
-#     },
-#     'low': {
-#         'HOST': 'localhost',
-#         'PORT': 6379,
-#         'DB': 0,
-#     }
-# }
-
-# RQ_EXCEPTION_HANDLERS = ['path.to.my.handler'] # If you need custom exception handlers
-
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -192,8 +153,6 @@ WSGI_APPLICATION = 'videoflix.wsgi.application'
 
 CACHE_TTL = 60 * 15
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -203,8 +162,7 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
