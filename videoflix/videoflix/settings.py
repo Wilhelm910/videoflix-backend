@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-qyp^e6tcmkofekajo%l3=)=zmeeko3a4a=#8ciga(-krx)i7*4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["35.242.201.160"]
 
 
 # Application definition
@@ -154,12 +154,28 @@ WSGI_APPLICATION = 'videoflix.wsgi.application'
 CACHE_TTL = 60 * 15
 
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "videoflix",
+        "USER": "wilhelm",
+        "PASSWORD": "Test123",
+        "HOST": "35.242.201.160",
+        "PORT": "5432",
     }
 }
+print(DATABASES)
+
+
+
 
 
 
@@ -203,6 +219,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 # STATICFILES_DIR = [
 #     BASE_DIR / "static",
 # ]
@@ -213,7 +231,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","35.242.201.160"]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
