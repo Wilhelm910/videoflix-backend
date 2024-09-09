@@ -1,5 +1,5 @@
 """
-URL configuration for videoflix project.
+ URL configuration for videoflix project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -23,6 +23,7 @@ from django.urls import include
 from videos.views import Video480pView, Video720pView, VideoListCreateView, VideoView, UpdateFavouriteView
 from django_rq import views
 from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,5 +44,5 @@ urlpatterns = [
     
     path('django-rq/', include('django_rq.urls')),
     path('__debug__/',include('debug_toolbar.urls')),
-]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
+]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) + staticfiles_urlpatterns() 
 
