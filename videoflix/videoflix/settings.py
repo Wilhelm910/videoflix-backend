@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print(f"BASE_DIR: {BASE_DIR}")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -44,7 +44,7 @@ REST_FRAMEWORK = {
 }
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
@@ -225,11 +225,21 @@ USE_TZ = True
 #STATIC_ROOT = os.path.join(BASE_DIR, "static")
 #STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+#STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+# URL für den Zugriff auf statische Dateien
 STATIC_URL = '/static/'
+
+# Verzeichnis, in das collectstatic alle statischen Dateien kopieren soll (nur für die Produktion)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-
+# Verzeichnisse, in denen du zusätzliche statische Dateien speicherst (für die Entwicklung)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 
 
@@ -245,20 +255,24 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","35.242.201.160","34.159.246.128"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","35.242.201.160","34.159.246.128","wilhelm-teicke.developerakademie.net",'videoflix-backend.zapto.org','*.videoflix-backend.zapto.org',]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+    'https://wilhelm-teicke.developerakademie.net',
+    'videoflix-backend.zapto.org',
+    '*.videoflix-backend.zapto.org',
 ]
 
 CORS_ALLOW_MEDIA = True
-
+CORS_ALLOW_CREDENTIALS = True
 
 
 CSRF_EXEMPT_PATHS = ['/logout/']
 
+FRONTEND_URL = 'https://wilhelm-teicke.developerakademie.net/videoflix'
 
-FRONTEND_URL = 'http://localhost:5173'
+#FRONTEND_URL = 'http://localhost:5173'
 DEFAULT_FROM_EMAIL = 'wilhelm.teicke@googlemail.com'
 
 env = environ.Env()
