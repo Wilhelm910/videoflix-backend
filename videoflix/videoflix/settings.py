@@ -44,7 +44,6 @@ REST_FRAMEWORK = {
 }
 
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
@@ -214,43 +213,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-
-
-
-#STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
-#STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-#STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
-
-# URL für den Zugriff auf statische Dateien
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = []
 
-# Verzeichnis, in das collectstatic alle statischen Dateien kopieren soll (nur für die Produktion)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Verzeichnisse, in denen du zusätzliche statische Dateien speicherst (für die Entwicklung)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
-
-
-
-
-# STATICFILES_DIR = [
-#     BASE_DIR / "static",
-# ]
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
