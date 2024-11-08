@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(f"BASE_DIR: {BASE_DIR}")
+#print(f"BASE_DIR: {BASE_DIR}")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -226,8 +226,9 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1","35.242.201.160","34.159.246.128","wil
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'https://wilhelm-teicke.developerakademie.net',
-    'videoflix-backend.zapto.org',
-    '*.videoflix-backend.zapto.org',
+    'https://videoflix-backend.zapto.org',
+    'http://videoflix-backend.zapto.org',
+    'https://*.videoflix-backend.zapto.org',
 ]
 
 CORS_ALLOW_MEDIA = True
