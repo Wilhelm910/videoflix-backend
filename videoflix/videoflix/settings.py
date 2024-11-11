@@ -14,9 +14,8 @@ from pathlib import Path
 import environ
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-#print(f"BASE_DIR: {BASE_DIR}")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -27,7 +26,7 @@ SECRET_KEY = 'django-insecure-qyp^e6tcmkofekajo%l3=)=zmeeko3a4a=#8ciga(-krx)i7*4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ["35.242.201.160"]
+
 
 
 # Application definition
@@ -92,7 +91,6 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 RQ_QUEUES = {
-    #'WORKER_CLASS': 'rq_win.WindowsWorker',
     "default": {
         'HOST': 'localhost',
         'PORT': 6379,
@@ -161,24 +159,6 @@ DATABASES = {
 }
 
 
-#DATABASES = {
-#    "default": {
-#        "ENGINE": "django.db.backends.postgresql",
-#        "NAME": "videoflix",
-#        "USER": "wilhelm",
-#        "PASSWORD": "Test123",
-#        "HOST": "35.242.201.160",
-#        "PORT": "5432",
-#    }
-#}
-#print(DATABASES)
-
-
-
-
-
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -239,7 +219,7 @@ CSRF_EXEMPT_PATHS = ['/logout/']
 
 FRONTEND_URL = 'https://wilhelm-teicke.developerakademie.net/videoflix'
 
-#FRONTEND_URL = 'http://localhost:5173'
+
 DEFAULT_FROM_EMAIL = 'wilhelm.teicke@googlemail.com'
 
 env = environ.Env()
