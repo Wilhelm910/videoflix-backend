@@ -1,0 +1,6 @@
+env/
+.env
+env_lin/
+db.sqlite3
+media/
+logs/
