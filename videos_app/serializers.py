@@ -1,7 +1,7 @@
 
 
 from rest_framework import serializers
-from .models import Video, Video480p, Video720p
+from .models import Video, Video120p, Video360p, Video720p
 
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,10 +15,15 @@ class VideoDetailSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'video_file', 'thumbnail', "categories", "favourite", "group"]
         
 
-class Video480pSerializer(serializers.ModelSerializer):
+class Video120pSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Video480p
-        fields = ['video_file_480p']
+        model = Video120p
+        fields = ['video_file_120p']
+        
+class Video360pSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Video360p
+        fields = ['video_file_360p']
         
 class Video720pSerializer(serializers.ModelSerializer):
     class Meta:

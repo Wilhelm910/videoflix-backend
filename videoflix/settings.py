@@ -93,7 +93,7 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 RQ_QUEUES = {
-    #'WORKER_CLASS': 'rq_win.WindowsWorker',
+    'WORKER_CLASS': 'rq_win.WindowsWorker',
     "default": {
         'HOST': 'localhost',
         'PORT': 6379,
@@ -151,7 +151,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'videoflix.wsgi.application'
 
 
-CACHE_TTL = 60 * 15
+#CACHE_TTL = 60 * 15
+CACHE_TTL = 0
 
 
 DATABASES = {
@@ -229,6 +230,7 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_HEADERS = [
     "content-type",
     "authorization",  # Falls du mit Auth-Headern arbeitest
+    "cache-control",
 ]
 
 CORS_ALLOW_MEDIA = True

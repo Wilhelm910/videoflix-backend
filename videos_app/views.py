@@ -6,8 +6,8 @@ from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from .models import Video, Video480p, Video720p
-from videos_app.serializers import Video480pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
+from .models import Video, Video120p, Video360p, Video720p
+from videos_app.serializers import Video120pSerializer, Video360pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
 from rest_framework import status
 from rest_framework.authentication import TokenAuthentication
 from django.utils.decorators import method_decorator
@@ -27,13 +27,22 @@ class VideoListCreateView(APIView):
 
     
     
-class Video480pView(APIView):
+class Video120pView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     @method_decorator(cache_page(CACHE_TTL))  
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
-        video_480p = get_object_or_404(Video480p, video=video)
-        serializer = Video480pSerializer(video_480p)
+        video_120p = get_object_or_404(Video120p, video=video)
+        serializer = Video120pSerializer(video_120p)
+        return Response(serializer.data)
+ 
+class Video360pView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    @method_decorator(cache_page(CACHE_TTL))
+    def get(self, request, video_id, format=None):
+        video = get_object_or_404(Video, id=video_id)
+        video_360p = get_object_or_404(Video360p, video=video)
+        serializer = Video360pSerializer(video_360p)
         return Response(serializer.data)
     
 class Video720pView(APIView):
@@ -61,6 +70,7 @@ class UpdateFavouriteView(APIView):
     def put(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
         favourite_status = request.data.get('favourite')
+        print(favourite_status)
         
          # Check if the 'favourite' field is provided in the request data
         if favourite_status is None:
@@ -73,6 +83,6 @@ class UpdateFavouriteView(APIView):
         # Update the 'favourite' field
         video.favourite = favourite_status
         video.save()
-        
+        print(video)
         serializer = VideoSerializer(video)
         return Response(serializer.data, status=status.HTTP_200_OK)

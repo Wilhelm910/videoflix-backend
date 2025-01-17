@@ -1,0 +1,48 @@
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_360p.mp4
+Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_120p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_thumbnail.jpg
