@@ -41,12 +41,12 @@ class Thumbnail(models.Model):
 
     
     
-class Video120p(models.Model):
-    video = models.OneToOneField(Video, on_delete=models.CASCADE, related_name='video_120p')
-    video_file_120p = models.FileField(blank=True, null=True)
+class Video480p(models.Model):
+    video = models.OneToOneField(Video, on_delete=models.CASCADE, related_name='video_480p')
+    video_file_480p = models.FileField(blank=True, null=True)
     
     def __str__(self):
-        return f"{self.video.title}_120p"
+        return f"{self.video.title}_480p"
     
 class Video360p(models.Model):
     video = models.OneToOneField(Video, on_delete=models.CASCADE, related_name='video_360p')
@@ -62,6 +62,14 @@ class Video720p(models.Model):
     
     def __str__(self):
         return f"{self.video.title}_720p"
+    
+    
+class Video1080p(models.Model):
+    video = models.OneToOneField(Video, on_delete=models.CASCADE, related_name='video_1080p')
+    video_file_1080p = models.FileField(blank=True, null=True)
+    
+    def __str__(self):
+        return f"{self.video.title}_1080p"
 
 
 

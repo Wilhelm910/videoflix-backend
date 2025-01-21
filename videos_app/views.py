@@ -6,8 +6,8 @@ from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from .models import Video, Video120p, Video360p, Video720p
-from videos_app.serializers import Video120pSerializer, Video360pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
+from .models import Video, Video480p, Video360p, Video720p, Video1080p
+from videos_app.serializers import Video1080pSerializer, Video480pSerializer, Video360pSerializer, Video720pSerializer, VideoDetailSerializer, VideoSerializer
 from rest_framework import status
 from rest_framework.authentication import TokenAuthentication
 from django.utils.decorators import method_decorator
@@ -27,13 +27,13 @@ class VideoListCreateView(APIView):
 
     
     
-class Video120pView(APIView):
+class Video480pView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     @method_decorator(cache_page(CACHE_TTL))  
     def get(self, request, video_id, format=None):
         video = get_object_or_404(Video, id=video_id)
-        video_120p = get_object_or_404(Video120p, video=video)
-        serializer = Video120pSerializer(video_120p)
+        video_480p = get_object_or_404(Video480p, video=video)
+        serializer = Video480pSerializer(video_480p)
         return Response(serializer.data)
  
 class Video360pView(APIView):
@@ -52,6 +52,15 @@ class Video720pView(APIView):
         video = get_object_or_404(Video, id=video_id)
         video_720p = get_object_or_404(Video720p, video=video)
         serializer = Video720pSerializer(video_720p)
+        return Response(serializer.data)
+    
+class Video1080pView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    @method_decorator(cache_page(CACHE_TTL))
+    def get(self, request, video_id, format=None):
+        video = get_object_or_404(Video, id=video_id)
+        video_1080p = get_object_or_404(Video1080p, video=video)
+        serializer = Video1080pSerializer(video_1080p)
         return Response(serializer.data)
     
 

@@ -1,48 +1,147 @@
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\pferd_29YM0f4_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Kueste_mit_Bergen_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\desert_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Schnellstraße_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Sonnenuntergang_Riesenrad_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\Entenkuecken_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\videos\stadt_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\media\Sonnenuntergang_am_see_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_qDCHIkv_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1bbtwLN_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_Riesenrad_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_0hIBxgd_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_wHgFVBr_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_RpvQ7uA_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_lQBtCbT_thumbnail.jpg
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_720p.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_360p.mp4
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kueste_mit_Bergen_thumbnail.jpg
+startet converting 1080p for C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4
+Converting to 1080p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1080p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_1080p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen_1080p.mp4"
+startet converting 720p for C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_720p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_720p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen_720p.mp4"
+startet converting 360p for C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_360p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_360p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen_360p.mp4"
+startet converting 480p for C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4
+Converting to 480p: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_480p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_480p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen_480p.mp4"
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_thumbnail.jpg
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Kuchen_thumbnail.jpgSuccessfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen.mp4" -ss 00:00:01.000 -vframes 1 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Kuchen_thumbnail.jpg"
+startet converting 1080p for C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4
+Converting to 1080p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_1080p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_1080p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang_1080p.mp4"
+startet converting 720p for C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4
 Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_720p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_720p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang_720p.mp4"
+startet converting 360p for C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4
 Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_120p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_360p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang_360p.mp4"
+startet converting 480p for C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4
+Converting to 480p: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_480p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_480p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang_480p.mp4"
 Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\pferd.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\pferd_thumbnail.jpg
-Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_720p.mp4
-Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_360p.mp4
-Converting to 120p: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_120p.mp4
-Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Sonnenuntergang_am_see_thumbnail.jpg
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Spaziergang_thumbnail.jpgSuccessfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang.mp4" -ss 00:00:01.000 -vframes 1 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Spaziergang_thumbnail.jpg"
+startet converting 1080p for C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4
+Converting to 1080p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_1080p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_1080p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt_1080p.mp4"
+startet converting 720p for C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_720p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_720p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt_720p.mp4"
+startet converting 360p for C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_360p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_360p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt_360p.mp4"
+startet converting 480p for C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4
+Converting to 480p: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_480p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_480p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt_480p.mp4"
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\stadt_thumbnail.jpg
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\stadt_thumbnail.jpgSuccessfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt.mp4" -ss 00:00:01.000 -vframes 1 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/stadt_thumbnail.jpg"
+startet converting 1080p for C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4
+Converting to 1080p: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_1080p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert_1080p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert_1080p.mp4"
+startet converting 720p for C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_720p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert_720p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert_720p.mp4"
+startet converting 360p for C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_360p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert_360p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert_360p.mp4"
+startet converting 480p for C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4
+Converting to 480p: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_480p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert_480p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert_480p.mp4"
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\desert_thumbnail.jpg
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\desert_thumbnail.jpgSuccessfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert.mp4" -ss 00:00:01.000 -vframes 1 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/desert_thumbnail.jpg"
+startet converting 1080p for C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4
+Converting to 1080p: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_1080p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_1080p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken_1080p.mp4"
+startet converting 720p for C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4
+Converting to 720p: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_720p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_720p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken_720p.mp4"
+startet converting 360p for C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4
+Converting to 360p: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_360p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_360p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken_360p.mp4"
+startet converting 480p for C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4
+Converting to 480p: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_480p.mp4
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_480p.mp4Successfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken_480p.mp4"
+Creating thumbnail: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4 -> C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_thumbnail.jpg
+Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken.mp4Log-Nachricht
+windows path: C:\Users\Wilhelm\Desktop\videoflix\media\Entenkuecken_thumbnail.jpgSuccessfully executed: ffmpeg -i "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken.mp4" -ss 00:00:01.000 -vframes 1 "/mnt/c/Users/Wilhelm/Desktop/videoflix/media/Entenkuecken_thumbnail.jpg"
