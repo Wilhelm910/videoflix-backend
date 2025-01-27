@@ -1,144 +1,109 @@
-from videos_app.tasks import convert_360p, convert_480p, convert_720p, convert_1080p, create_thumbnail
-from .models import Thumbnail, Video, Video480p, Video360p, Video720p, Video1080p
-from django.dispatch import receiver
-from django.db.models.signals import post_save, post_delete
 import os
-import django_rq
-from django.conf import settings
-import django_rq
+from django.test import TestCase
+from django.core.files.base import ContentFile
+from videos_app.models import Video, Video480p, Video360p, Video720p, Video1080p, Thumbnail
+from django.db.utils import IntegrityError
 
-def verify_file_existence(filepath, resolution):
-    if not os.path.exists(filepath):
-        with open("output_log.txt", "a") as log_file:
-            log_file.write(f"{resolution} file not found: {filepath}\n")
-        return False
-    return True
+class VideoModelTest(TestCase):
+    def setUp(self):
+        """
+        Setup für jeden Test: Bereinigt die Datenbank und erstellt eine Ausgangsvideo-Datei.
+        """
+        # Video erstellen
+        self.video = Video.objects.create(
+            title="Test Video",
+            description="Test video with different resolutions.",
+            favourite=True,
+            group="drama",
+            video_file=ContentFile(b"Dummy video content", name="test_video.mp4")
+        )
 
-
-@receiver(post_save, sender=Video)
-def video_post_save(sender, instance, created, **kwargs):
-    print("Video wurde gespeichert")
-    if created:
-        print("Video wurde erstellt")
-        # queue = django_rq.get_queue('default', autocommit=True)
-        # queue.enqueue("videos_app.tasks.convert_1080p", instance.video_file.path)
-        # queue.enqueue("videos_app.tasks.convert_720p", instance.video_file.path)
-        # queue.enqueue("videos_app.tasks.convert_360p", instance.video_file.path)
-        # queue.enqueue("videos_app.tasks.convert_480p", instance.video_file.path)
-        # queue.enqueue("videos_app.tasks.create_thumbnail", instance.video_file.path)
+    def test_video_creation(self):
+        """
+        Testet, ob das Video korrekt erstellt wird und alle zugehörigen Auflösungen verknüpft werden.
+        """
+        # Video ist korrekt erstellt
+        self.assertEqual(self.video.title, "Test Video")
+        self.assertEqual(self.video.video_file.name, "test_video.mp4")
         
-        queue = django_rq.get_queue('default', autocommit=True)
-        queue.enqueue(convert_1080p, instance.video_file.path)
-        print("started")
-        queue.enqueue(convert_720p, instance.video_file.path)
-        queue.enqueue(convert_360p, instance.video_file.path)
-        queue.enqueue(convert_480p, instance.video_file.path)
-        queue.enqueue(create_thumbnail, instance.video_file.path)
-        print(queue)
-        print(instance.video_file.path)
-        print(convert_480p)
-               
-        # Relative Pfade erstellen
-        video_480p_path = instance.video_file.name.replace(".mp4", "_480p.mp4")
-        print(video_480p_path)
-        video_360p_path = instance.video_file.name.replace(".mp4", "_360p.mp4")
-        print(video_360p_path)
-        video_720p_path = instance.video_file.name.replace(".mp4", "_720p.mp4")
-        print(video_720p_path)
-        video_1080p_path = instance.video_file.name.replace(".mp4", "_1080p.mp4")
-        print(video_1080p_path)
-        thumbnail_path = instance.video_file.name.replace(".mp4", "_thumbnail.jpg")
+        # Testen, ob die Video-Instanzen für 480p, 360p, 720p und 1080p erstellt wurden
+        video_480p = Video480p.objects.filter(video=self.video).first()
+        video_360p = Video360p.objects.filter(video=self.video).first()
+        video_720p = Video720p.objects.filter(video=self.video).first()
+        video_1080p = Video1080p.objects.filter(video=self.video).first()
+
+        # Überprüfen, ob für jede Auflösung eine Instanz existiert
+        self.assertIsNotNone(video_480p)
+        self.assertIsNotNone(video_360p)
+        self.assertIsNotNone(video_720p)
+        self.assertIsNotNone(video_1080p)
         
-        # Datenbankeinträge für die konvertierten Videos erstellen
-        video_480p_instance = Video480p(video=instance, video_file_480p=video_480p_path)
-        print(video_480p_instance)
-        video_480p_instance.save()
+        # Überprüfen, ob die Pfade der konvertierten Videos korrekt sind
+        self.assertTrue(video_480p.video_file_480p.endswith("_480p.mp4"))
+        self.assertTrue(video_360p.video_file_360p.endswith("_360p.mp4"))
+        self.assertTrue(video_720p.video_file_720p.endswith("_720p.mp4"))
+        self.assertTrue(video_1080p.video_file_1080p.endswith("_1080p.mp4"))
+    
+    def test_video_thumbnail(self):
+        """
+        Testet, ob das Thumbnail korrekt gesetzt wird, wenn das Video erstellt wird.
+        """
+        # Erstelle ein Thumbnail für das Video
+        thumbnail = Thumbnail.objects.create(
+            video=self.video,
+            thumbnail_file=ContentFile(b"dummy_image_content", "thumbnail.jpg")
+        )
+
+        # Überprüfen, ob das Thumbnail korrekt gesetzt wurde
+        self.assertTrue(thumbnail.thumbnail_file.name.endswith("thumbnail.jpg"))
+    
+    def test_video_file_deletion(self):
+        """
+        Testet, ob das Video gelöscht wird, einschließlich der zugehörigen Dateien für die verschiedenen Auflösungen.
+        """
+        # Lösche das Video
+        video_file_path = self.video.video_file.path
+        self.video.delete()
         
-        video_360p_instance = Video360p(video=instance, video_file_360p=video_360p_path)
-        print(video_360p_instance)
-        video_360p_instance.save()
-
-        video_720p_instance = Video720p(video=instance, video_file_720p=video_720p_path)
-        print(video_720p_instance)
-        video_720p_instance.save()
+        # Überprüfen, ob die Dateien auf dem Dateisystem gelöscht wurden
+        self.assertFalse(os.path.exists(video_file_path))
         
-        video_1080p_instance = Video1080p(video=instance, video_file_1080p=video_1080p_path)
-        print(video_1080p_instance)
-        video_1080p_instance.save()
+        # Überprüfen, ob auch die konvertierten Videos gelöscht wurden
+        video_480p_path = self.video.video_480p.video_file_480p.path
+        video_360p_path = self.video.video_360p.video_file_360p.path
+        video_720p_path = self.video.video_720p.video_file_720p.path
+        video_1080p_path = self.video.video_1080p.video_file_1080p.path
         
-        # Thumbnail setzen
-        instance.thumbnail = thumbnail_path
+        self.assertFalse(os.path.exists(video_480p_path))
+        self.assertFalse(os.path.exists(video_360p_path))
+        self.assertFalse(os.path.exists(video_720p_path))
+        self.assertFalse(os.path.exists(video_1080p_path))
+    
+    def test_unique_constraint_on_video(self):
+        """
+        Testet, ob der UNIQUE-Constraint für `video_id` korrekt funktioniert.
+        """
+        # Versuchen, ein Video mit der gleichen `video_id` zu erstellen, um einen IntegrityError zu provozieren
+        with self.assertRaises(IntegrityError):
+            Video480p.objects.create(video=self.video, video_file_480p="test_video_480p.mp4")
         
-        # Verknüpfung der Videoqualitäten mit dem Hauptvideo
-        instance.video_480p = video_480p_instance
-        instance.video_360p = video_360p_instance
-        instance.video_720p = video_720p_instance
-        instance.video_1080p = video_1080p_instance
-        instance.save()
-
-
-
-# from videos_app.tasks import convert_360p, convert_480p, convert_720p, convert_1080p, create_thumbnail
-# from .models import Thumbnail, Video, Video480p, Video360p, Video720p, Video1080p
-# from django.dispatch import receiver
-# from django.db.models.signals import post_save, post_delete
-# import django_rq
-# import os
-
-# def verify_file_existence(filepath, resolution):
-#     if not os.path.exists(filepath):
-#         with open("output_log.txt", "a") as log_file:
-#             log_file.write(f"{resolution} file not found: {filepath}\n")
-#         return False
-#     return True
-
-# @receiver(post_save, sender=Video)
-# def video_post_save(sender, instance, created, **kwargs):
-#     if created:
-#         queue = django_rq.get_queue('default', autocommit=True)
-#         queue.enqueue(convert_720p, instance.video_file.path)
-#         queue.enqueue(convert_360p, instance.video_file.path)
-#         queue.enqueue(convert_480p, instance.video_file.path)
-#         queue.enqueue(convert_1080p, instance.video_file.path)
-#         queue.enqueue(create_thumbnail, instance.video_file.path)
+    def test_video_signal_trigger(self):
+        """
+        Testet, ob die Signal-Logik beim Speichern eines Videos funktioniert.
+        """
+        # Erstelle ein neues Video und überprüfe, ob die Video-Auflösungen und das Thumbnail erstellt wurden
+        new_video = Video.objects.create(
+            title="New Test Video",
+            description="Another test video with different resolutions.",
+            favourite=True,
+            group="comedy",
+            video_file=ContentFile(b"New dummy video content", name="new_test_video.mp4")
+        )
         
-#         video_480p_path = instance.video_file.name.replace(".mp4", "_480p.mp4")
-#         video_360p_path = instance.video_file.name.replace(".mp4", "_360p.mp4")
-#         video_720p_path = instance.video_file.name.replace(".mp4", "_720p.mp4")
-#         video_1080p_path = instance.video_file.name.replace(".mp4", "_1080p.mp4")
-#         thumbnail_path = instance.video_file.name.replace(".mp4", "_thumbnail.jpg")
-
-#         if verify_file_existence(video_360p_path, "360p"):
-#             video_360p_instance = Video360p.objects.create(video=instance, video_file_360p=video_360p_path)
-#             instance.video_360p = video_360p_instance
-
-#         if verify_file_existence(video_480p_path, "480p"):
-#             video_480p_instance = Video480p.objects.create(video=instance, video_file_480p=video_480p_path)
-#             instance.video_480p = video_480p_instance
-
-#         if verify_file_existence(video_720p_path, "720p"):
-#             video_720p_instance = Video720p.objects.create(video=instance, video_file_720p=video_720p_path)
-#             instance.video_720p = video_720p_instance
-
-#         if verify_file_existence(video_1080p_path, "1080p"):
-#             video_1080p_instance = Video1080p.objects.create(video=instance, video_file_1080p=video_1080p_path)
-#             instance.video_1080p = video_1080p_instance
-
-#         if verify_file_existence(thumbnail_path, "Thumbnail"):
-#             instance.thumbnail = thumbnail_path
-
-#         instance.save()
-
-
-@receiver(post_delete, sender=Video)
-def auto_delete_file_on_delete(sender, instance, **kwargs):
-    """
-    Deletes file from filesystem
-    when corresponding `Video` object is deleted.
-    """
-    if instance.video_file:
-        if os.path.isfile(instance.video_file.path):
-            os.remove(instance.video_file.path)
-            print("Video wurde gelöscht")
-            
-
+        # Warte, bis die Signal-Logik das Video verarbeitet (falls asynchron, Simulation)
+        
+        # Überprüfe, ob das Video in allen Auflösungen existiert
+        self.assertTrue(Video480p.objects.filter(video=new_video).exists())
+        self.assertTrue(Video360p.objects.filter(video=new_video).exists())
+        self.assertTrue(Video720p.objects.filter(video=new_video).exists())
+        self.assertTrue(Video1080p.objects.filter(video=new_video).exists())

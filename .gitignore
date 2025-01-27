@@ -5,3 +5,4 @@ env_lin/
 db.sqlite3
 media/
 logs/
+Readme_server.md
