@@ -44,5 +44,6 @@ Testing:
 pytest users_app/tests/test_models.py
 pytest users_app/tests/test_views.py
 pytest videos_app/tests/test_models.py
+pytest videos_app/tests/test_views.py
 
 

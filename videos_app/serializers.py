@@ -18,21 +18,22 @@ class VideoDetailSerializer(serializers.ModelSerializer):
 class Video480pSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video480p
-        fields = ['video_file_480p']
+        #fields = ['video_file_480p']
+        fields = ['id','video_file_480p']
         
 class Video360pSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video360p
-        fields = ['video_file_360p']
+        fields = ['id','video_file_360p']
         
 class Video720pSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video720p
-        fields = ['video_file_720p']
+        fields = ['id','video_file_720p']
         
 class Video1080pSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video1080p
-        fields = ['video_file_1080p']
+        fields = ['id','video_file_1080p']
 
 
