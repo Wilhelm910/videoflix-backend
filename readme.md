@@ -1,49 +1,47 @@
-# Videoflix Backend
+# VideoFlix Backend Setup
 
-Ein skalierbares Backend für die Videoflix-Anwendung, entwickelt mit Django und Django REST Framework (DRF). Dieses Backend ermöglicht die Konvertierung von Videos in verschiedene Formate mithilfe des RQ-Workers.
-
-## Features
-- **API**: RESTful API für CRUD-Operationen auf Videos und Benutzerdaten, basierend auf Django REST Framework.
-- **Video-Konvertierung**: Automatische Verarbeitung und Konvertierung hochgeladener Videos in verschiedene Formate mit `rqworker` und Redis.
+Follow the instructions below to set up and run the VideoFlix backend application. This guide covers the Windows environment for general backend tasks and WSL (Linux) for the video conversion service.
 
 ---
 
-## Installation
+## 1. Clone the Repository
 
-### Voraussetzungen
-- Python 3.10+
-- Linux WSL (Windows Subsystem for Linux), falls der RQ-Worker auf einem Windows-System ausgeführt wird.
+git clone https://github.com/Wilhelm910/videoflix-backend
+cd videoflix-backend
 
-### Setup
-1. **Repository klonen**:
-   ```bash
-   git clone <https://github.com/Wilhelm910/videoflix-backend>
-   cd videoflix-backend
-
-2. **Virtuell Umgebung erstellen**
+## 2. Create and Activate the Windows Virtual Environment
 python -m venv env
-env\Scripts\activate
+Switch into cmd-terminal: "env\Scripts\activate"
 
+## 3. Install Windows Requirements
+pip install -r requirements.txt
+
+## 4. Create the .env File for Email Verification Service
+In the project root (or inside the /videoflix folder), create a file named .env with the following content (replace with your actual credentials):
+EMAIL_HOST_USER=your_host_email_address
+EMAIL_HOST_PASSWORD=your_host_email_password
+
+## 5. Set Up the Linux Environment for the Video Conversion Service (WSL)
+Open a WSL terminal, navigate to your project folder, and create a Linux virtual environment:
 python3 -m venv env-lin
 source env-lin/bin/activate
-
-
-3. **Abhängigkeiten installieren**
-pip install -r requirements.txt
 pip install -r requirements-lin.txt
 
+## 6. Initial Backend Setup (Using Windows Environment)
+In your activated Windows environment, run the following commands to set up the database and create a superuser:
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+Then, start the development server:
+python manage.py runserver
 
-env starten: "env/scripts/activate"
-backend starten: python manage.py runserver
+## 7. Start the RQ Worker (Using WSL Environment)
+python manage.py rqworker default
 
-env-lin starten: source env-lin/bin/activate
-rq worker starten: python manage.py rqworker default
+## 8. Adding New Videos via the Admin Dashboard
+To add new videos, log in to the Django admin dashboard and navigate to the Videos section. Provide the following required information:
 
-
-Testing:
-pytest users_app/tests/test_models.py
-pytest users_app/tests/test_views.py
-pytest videos_app/tests/test_models.py
-pytest videos_app/tests/test_views.py
-
-
+Title
+Description
+Video File
+Category: Enter categories in array format, e.g. ["category1", "category2", ...]
