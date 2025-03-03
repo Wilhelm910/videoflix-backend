@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Mail Verifizierung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Das Logo einbinden: absolute URL wird aus FRONTEND_URL und dem static-Pfad zusammengesetzt -->
+            <img src="{{ logo_url }}" alt="Logo" style="max-width:150px; margin-bottom: 10px;">
+            <h1>E-Mail Verifizierung</h1>
+        </div>
+        <p>Hallo {{ user.email }},</p>
+        <p>Bitte klicke auf den folgenden Button, um deine E-Mail-Adresse zu verifizieren.</p>
+        <p style="text-align: center;">
+            <a href="{{ verification_link }}" class="button">E-Mail verifizieren</a>
+        </p>
+        <p>Falls der Button nicht funktioniert, kopiere bitte diesen Link in deinen Browser:</p>
+        <p><a href="{{ verification_link }}">{{ verification_link }}</a></p>
+        <div class="footer">
+            &copy; {{ current_year }} Dein Unternehmen. Alle Rechte vorbehalten.
+        </div>
+    </div>
+</body>
+</html>

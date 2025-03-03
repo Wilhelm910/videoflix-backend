@@ -44,7 +44,7 @@ REST_FRAMEWORK = {
 }
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
+
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
@@ -66,6 +66,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,9 +74,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
 ]
 
 
@@ -92,21 +91,31 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 
+# RQ_QUEUES = {
+#     'WORKER_CLASS': 'rq_win.WindowsWorker',
+#     "default": {
+#         'HOST': 'localhost',
+#         'PORT': 6379,
+#         'DB': 0,
+#         "DEFAULT_TIMEOUT": 360,
+#         'PASSWORD': 'foobared',
+#     }
+# }
 RQ_QUEUES = {
-    'WORKER_CLASS': 'rq_win.WindowsWorker',
-    "default": {
-        'HOST': 'localhost',
+    'default': {
+        'HOST': '127.0.0.1',
         'PORT': 6379,
         'DB': 0,
-        "DEFAULT_TIMEOUT": 360,
-        'PASSWORD': 'foobared',
-    }
+        'DEFAULT_TIMEOUT': 360,
+       # 'PASSWORD': 'foobared',
+    },
 }
+
 
 DJANGO_RQ = {
     'default': {
         'USE_REDIS_CACHE': True,
-        'WORKER_CLASS': 'rq_win.WindowsWorker',
+       # 'WORKER_CLASS': 'rq_win.WindowsWorker',
     }
 }
 
@@ -116,7 +125,7 @@ CACHES = {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/1",
         "OPTIONS": {
-            "PASSWORD": "foobared",
+           # "PASSWORD": "foobared",
             "CLIENT_CLASS": "django_redis.client.DefaultClient"
         },
         "KEY_PREFIX": "videoflix"
@@ -155,12 +164,23 @@ WSGI_APPLICATION = 'videoflix.wsgi.application'
 CACHE_TTL = 0
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'videoflixdb',         # Name deiner PostgreSQL-Datenbank
+        'USER': 'postgres',       # Datenbank-Benutzer
+        'PASSWORD': '',   # Passwort des Benutzers
+        'HOST': 'localhost',           # Falls PostgreSQL lokal läuft
+        'PORT': '5432',                # Standardport von PostgreSQL
     }
 }
+
 
 
 
@@ -183,6 +203,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+#MEDIA_URL = 'https://wilhelm-teicke.developerakademie.org/media/'
 
 
 AUTH_USER_MODEL = 'users_app.CustomUser'
@@ -204,6 +225,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/videoflix/static/staticfiles/'
+
+###
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),  
+# ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
 # STATICFILES_DIR = [
 #     BASE_DIR / "static",
 # ]
@@ -214,11 +243,14 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", 'wilhelm-teicke.developerakademie.org', 'wilhelm-teicke.developerakademie.net']
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:5173',
+#     'https://wilhelm-teicke.developerakademie.net',
+# ]
 
 CORS_ALLOW_METHODS = [
     "GET",
@@ -240,7 +272,9 @@ CORS_ALLOW_MEDIA = True
 CSRF_EXEMPT_PATHS = ['/logout/']
 
 
-FRONTEND_URL = 'http://localhost:5173'
+#FRONTEND_URL = 'http://localhost:5173'
+FRONTEND_URL = 'https://wilhelm-teicke.developerakademie.net/videoflix'
+
 DEFAULT_FROM_EMAIL = 'wilhelm.teicke@googlemail.com'
 
 env = environ.Env()

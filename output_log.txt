@@ -1837,3 +1837,187 @@ ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg develop
 [mov,mp4,m4a,3gp,3g2,mj2 @ 0x7fffd4f5c300] moov atom not found
 /mnt/c/Users/Wilhelm/Desktop/videoflix/media/test_video_720p_8sOpWwm.mp4: Invalid data found when processing input
 
+startet converting 720p for /root/projects/videoflix-backend/media/Kaffeart.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Kaffeart.mp4 -> /root/projects/videoflix-backend/media/Kaffeart_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kaffeart.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Kaffeart_720p.mp4"
+startet converting 1080p for /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4 -> /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4 -> /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4 -> /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4 -> /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4 -> /root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/RoteFrau_tOsUbO8_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4 -> /root/projects/videoflix-backend/media/Kueste_mit_Bergen_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Kueste_mit_Bergen_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4 -> /root/projects/videoflix-backend/media/Kueste_mit_Bergen_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Kueste_mit_Bergen_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4 -> /root/projects/videoflix-backend/media/Kueste_mit_Bergen_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Kueste_mit_Bergen_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4 -> /root/projects/videoflix-backend/media/Kueste_mit_Bergen_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Kueste_mit_Bergen_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4 -> /root/projects/videoflix-backend/media/Kueste_mit_Bergen_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Kueste_mit_Bergen.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Kueste_mit_Bergen_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Blumenstrauß.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Blumenstrauß.mp4 -> /root/projects/videoflix-backend/media/Blumenstrauß_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Blumenstrauß.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Blumenstrauß_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Blumenstrauß.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Blumenstrauß.mp4 -> /root/projects/videoflix-backend/media/Blumenstrauß_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Blumenstrauß.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Blumenstrauß_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Blumenstrauß.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Blumenstrauß.mp4 -> /root/projects/videoflix-backend/media/Blumenstrauß_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Blumenstrauß.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Blumenstrauß_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Blumenstrauß.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Blumenstrauß.mp4 -> /root/projects/videoflix-backend/media/Blumenstrauß_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Blumenstrauß.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Blumenstrauß_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Blumenstrauß.mp4 -> /root/projects/videoflix-backend/media/Blumenstrauß_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Blumenstrauß.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Blumenstrauß_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Schnellstraße.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Schnellstraße.mp4 -> /root/projects/videoflix-backend/media/Schnellstraße_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schnellstraße.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schnellstraße_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Schnellstraße.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Schnellstraße.mp4 -> /root/projects/videoflix-backend/media/Schnellstraße_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schnellstraße.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schnellstraße_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Schnellstraße.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Schnellstraße.mp4 -> /root/projects/videoflix-backend/media/Schnellstraße_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schnellstraße.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schnellstraße_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Schnellstraße.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Schnellstraße.mp4 -> /root/projects/videoflix-backend/media/Schnellstraße_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schnellstraße.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schnellstraße_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Schnellstraße.mp4 -> /root/projects/videoflix-backend/media/Schnellstraße_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schnellstraße.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Schnellstraße_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Entenkuecken.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Entenkuecken.mp4 -> /root/projects/videoflix-backend/media/Entenkuecken_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Entenkuecken.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Entenkuecken_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Entenkuecken.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Entenkuecken.mp4 -> /root/projects/videoflix-backend/media/Entenkuecken_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Entenkuecken.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Entenkuecken_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Entenkuecken.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Entenkuecken.mp4 -> /root/projects/videoflix-backend/media/Entenkuecken_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Entenkuecken.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Entenkuecken_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Entenkuecken.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Entenkuecken.mp4 -> /root/projects/videoflix-backend/media/Entenkuecken_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Entenkuecken.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Entenkuecken_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Entenkuecken.mp4 -> /root/projects/videoflix-backend/media/Entenkuecken_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Entenkuecken.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Entenkuecken_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Sonnenuntergang_Riesenrad_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Spaziergang.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Spaziergang.mp4 -> /root/projects/videoflix-backend/media/Spaziergang_1080p.mp4
+startet converting 720p for /root/projects/videoflix-backend/media/Spaziergang.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Spaziergang.mp4 -> /root/projects/videoflix-backend/media/Spaziergang_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Spaziergang.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Spaziergang_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Spaziergang.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Spaziergang.mp4 -> /root/projects/videoflix-backend/media/Spaziergang_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Spaziergang.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Spaziergang_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Spaziergang.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Spaziergang.mp4 -> /root/projects/videoflix-backend/media/Spaziergang_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Spaziergang.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Spaziergang_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Spaziergang.mp4 -> /root/projects/videoflix-backend/media/Spaziergang_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Spaziergang.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Spaziergang_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Eichhörnchen.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Eichhörnchen.mp4 -> /root/projects/videoflix-backend/media/Eichhörnchen_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Eichhörnchen.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Eichhörnchen_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Eichhörnchen.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Eichhörnchen.mp4 -> /root/projects/videoflix-backend/media/Eichhörnchen_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Eichhörnchen.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Eichhörnchen_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Eichhörnchen.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Eichhörnchen.mp4 -> /root/projects/videoflix-backend/media/Eichhörnchen_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Eichhörnchen.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Eichhörnchen_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Eichhörnchen.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Eichhörnchen.mp4 -> /root/projects/videoflix-backend/media/Eichhörnchen_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Eichhörnchen.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Eichhörnchen_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Eichhörnchen.mp4 -> /root/projects/videoflix-backend/media/Eichhörnchen_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Eichhörnchen.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Eichhörnchen_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_am_see_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_am_see_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_am_see_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_am_see_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4 -> /root/projects/videoflix-backend/media/Sonnenuntergang_am_see_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Sonnenuntergang_am_see_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4 -> /root/projects/videoflix-backend/media/Schneebedeckte_Berge_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schneebedeckte_Berge_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4 -> /root/projects/videoflix-backend/media/Schneebedeckte_Berge_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schneebedeckte_Berge_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4 -> /root/projects/videoflix-backend/media/Schneebedeckte_Berge_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schneebedeckte_Berge_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4 -> /root/projects/videoflix-backend/media/Schneebedeckte_Berge_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Schneebedeckte_Berge_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4 -> /root/projects/videoflix-backend/media/Schneebedeckte_Berge_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Schneebedeckte_Berge.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Schneebedeckte_Berge_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/desert.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/desert.mp4 -> /root/projects/videoflix-backend/media/desert_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/desert.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/desert_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/desert.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/desert.mp4 -> /root/projects/videoflix-backend/media/desert_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/desert.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/desert_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/desert.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/desert.mp4 -> /root/projects/videoflix-backend/media/desert_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/desert.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/desert_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/desert.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/desert.mp4 -> /root/projects/videoflix-backend/media/desert_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/desert.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/desert_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/desert.mp4 -> /root/projects/videoflix-backend/media/desert_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/desert.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/desert_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/stadt.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/stadt.mp4 -> /root/projects/videoflix-backend/media/stadt_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/stadt.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/stadt_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/stadt.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/stadt.mp4 -> /root/projects/videoflix-backend/media/stadt_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/stadt.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/stadt_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/stadt.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/stadt.mp4 -> /root/projects/videoflix-backend/media/stadt_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/stadt.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/stadt_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/stadt.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/stadt.mp4 -> /root/projects/videoflix-backend/media/stadt_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/stadt.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/stadt_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/stadt.mp4 -> /root/projects/videoflix-backend/media/stadt_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/stadt.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/stadt_thumbnail.jpg"
+startet converting 1080p for /root/projects/videoflix-backend/media/Frauinweiß.mp4
+Converting to 1080p: /root/projects/videoflix-backend/media/Frauinweiß.mp4 -> /root/projects/videoflix-backend/media/Frauinweiß_1080p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Frauinweiß.mp4" -s hd1080 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Frauinweiß_1080p.mp4"
+startet converting 720p for /root/projects/videoflix-backend/media/Frauinweiß.mp4
+Converting to 720p: /root/projects/videoflix-backend/media/Frauinweiß.mp4 -> /root/projects/videoflix-backend/media/Frauinweiß_720p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Frauinweiß.mp4" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Frauinweiß_720p.mp4"
+startet converting 360p for /root/projects/videoflix-backend/media/Frauinweiß.mp4
+Converting to 360p: /root/projects/videoflix-backend/media/Frauinweiß.mp4 -> /root/projects/videoflix-backend/media/Frauinweiß_360p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Frauinweiß.mp4" -s 640x360 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Frauinweiß_360p.mp4"
+startet converting 480p for /root/projects/videoflix-backend/media/Frauinweiß.mp4
+Converting to 480p: /root/projects/videoflix-backend/media/Frauinweiß.mp4 -> /root/projects/videoflix-backend/media/Frauinweiß_480p.mp4
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Frauinweiß.mp4" -s hd480 -c:v libx264 -crf 23 -c:a aac -strict -2 "/root/projects/videoflix-backend/media/Frauinweiß_480p.mp4"
+Creating thumbnail: /root/projects/videoflix-backend/media/Frauinweiß.mp4 -> /root/projects/videoflix-backend/media/Frauinweiß_thumbnail.jpg
+Successfully executed: ffmpeg -i "/root/projects/videoflix-backend/media/Frauinweiß.mp4" -ss 00:00:01.000 -vframes 1 "/root/projects/videoflix-backend/media/Frauinweiß_thumbnail.jpg"

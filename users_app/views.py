@@ -15,16 +15,36 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
 
+# class RegisterUserView(APIView):
+#     permission_classes = [AllowAny] 
+#     def post(self, request):
+#         serializer = CustomUserSerializer(data=request.data)
+#         if serializer.is_valid():
+#             user = serializer.save()
+#           #  print(f"Token after user creation: {user.email_verification_token}")
+#             send_verification_email(user)
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class RegisterUserView(APIView):
     permission_classes = [AllowAny] 
+
     def post(self, request):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
-          #  print(f"Token after user creation: {user.email_verification_token}")
             send_verification_email(user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        # Überprüfe, ob es einen Fehler beim Email-Feld gibt und gebe eine entsprechende Nachricht zurück
+        if 'email' in serializer.errors:
+            return Response(
+                {"error": "An error occured."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 class VerifyEmailView(APIView):

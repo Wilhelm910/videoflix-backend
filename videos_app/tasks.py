@@ -1,15 +1,16 @@
 import subprocess
 
 # Deine Funktionen
-def windows_to_wsl_path(windows_path):
-    with open("output_log.txt", "a", buffering=1) as log_file:
-        log_file.write("Log-Nachricht\n")
-        log_file.flush()  # Force flush after writing
-    print("Test output", flush=True)
-    with open("output_log.txt", "a") as log_file:
-        log_file.write(f"windows path: {windows_path}")
-    """Konvertiert einen Windows-Pfad in einen WSL-Pfad."""
-    return windows_path.replace("\\", "/").replace("C:", "/mnt/c")
+def windows_to_wsl_path(path):
+    # with open("output_log.txt", "a", buffering=1) as log_file:
+    #     log_file.write("Log-Nachricht\n")
+    #     log_file.flush()  # Force flush after writing
+    # print("Test output", flush=True)
+    # with open("output_log.txt", "a") as log_file:
+    #     log_file.write(f"windows path: {windows_path}")
+    # """Konvertiert einen Windows-Pfad in einen WSL-Pfad."""
+    # return windows_path.replace("\\", "/").replace("C:", "/mnt/c")
+    return path
 
 def execute_command(cmd):
     """Führt einen Shell-Befehl aus und protokolliert Fehler."""
