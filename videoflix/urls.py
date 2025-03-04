@@ -1,32 +1,33 @@
 """
-URL configuration for videoflix project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+URL configuration for the videoflix project.
+Routes URLs to corresponding views.
 """
+
 from django.contrib import admin
-from django.urls import path
-from users_app.views import ChangePasswordView, CurrentUserView, CustomUserView, LogoutView, PasswordResetConfirmView, PasswordResetView, RegisterUserView, UserLoginView, VerifyEmailView
+from django.urls import path, include
+from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import include
-from videos_app.views import Video480pView, Video360pView, Video720pView, Video1080pView, VideoListCreateView, VideoView, UpdateFavouriteView
+
+# Import views from user and video apps.
+from users_app.views import (
+    ChangePasswordView, CurrentUserView, CustomUserView, LogoutView,
+    PasswordResetConfirmView, PasswordResetView, RegisterUserView,
+    UserLoginView, VerifyEmailView
+)
+from videos_app.views import (
+    Video480pView, Video360pView, Video720pView, Video1080pView,
+    VideoListCreateView, VideoView, UpdateFavouriteView
+)
 from django_rq import views
-from django.views.generic.base import RedirectView
 
 urlpatterns = [
+    # Admin panel.
     path('admin/', admin.site.urls),
+    # Redirect root URL to admin panel.
     path('', RedirectView.as_view(url='/admin/', permanent=False)),
+
+    # User authentication and account management URLs.
     path('register/', RegisterUserView.as_view(), name='register'),
     path('verify-email/<str:token>/', VerifyEmailView.as_view(), name='verify-email'),
     path('get-all-users/', CustomUserView.as_view(), name="get-all-users"),
@@ -37,6 +38,7 @@ urlpatterns = [
     path('password-reset/', PasswordResetView.as_view(), name='password-reset'),
     path('password-reset-confirm/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     
+    # Video-related URLs.
     path('videos/', VideoListCreateView.as_view(), name='video-list-create'),
     path('video/<int:video_id>/', VideoView.as_view(), name='video-detail'),
     path('video/<int:video_id>/480p/', Video480pView.as_view(), name='get_480p_video'),
@@ -45,8 +47,13 @@ urlpatterns = [
     path('video/<int:video_id>/1080p/', Video1080pView.as_view(), name='get_1080p_video'),
     path('video/<int:video_id>/update-favourite/', UpdateFavouriteView.as_view(), name='update-favourite'),
     
+    # Django RQ admin URLs.
     path('django-rq/', include('django_rq.urls')),
-    path('__debug__/',include('debug_toolbar.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # Debug toolbar URLs.
+    path('__debug__/', include('debug_toolbar.urls')),
+]
+
+# Serve media files during development.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
